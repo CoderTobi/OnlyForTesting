@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}tickets{% endblock %}
+
+{% block content %}
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">id</th>
+				<th scope="col">priority</th>
+				<th scope="col">username</th>
+				<th scope="col">title</th>
+				<th scope="col">More Info</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in items %}
+			<tr>
+				<th scope="row">{{ item.id }}</th>
+				<td>{{ item.priority }}</td>
+				<td>{{ item.username }}</td>
+				<td>{{ item.title }}</td>
+				<td><a href="/ticket/{{ item.id }}" type="button" class="btn">More Info</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

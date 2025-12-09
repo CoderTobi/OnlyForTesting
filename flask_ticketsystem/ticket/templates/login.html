@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Ticket System{% endblock %}
+
+{% block content %}
+<div class="row ms-3 me-3">
+	<div class="col-md-4 offset-md-4">
+		<h1>Login</h1>
+		<a href="/register">Register a new account</a>
+		<form method="POST" action="/login">
+			<div class="mb-3">
+				<label for="inputUsername" class="form-label">Username</label>
+				<input type="text" name="Username" class="form-control" id="inputUsername" aria-describedby="usernameHelp">
+			</div>
+			<div class="mb-3">
+				<label for="inputPassword" class="form-label">Password</label>
+				<input type="password" name="Password" class="form-control" id="inputPassword">
+				<div id="passwordHelp" class="form-text">We'll never share your password with anyone else.</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+	</div>
+</div>
+
+
+{% endblock %}
